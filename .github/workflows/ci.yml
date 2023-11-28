@@ -32,6 +32,10 @@ jobs:
         uses: ./.github/actions/test
         with:
           ruyi: python -m ruyi
+      - id: testcompile
+        uses: ./.github/actions/compile
+        with:
+          ruyi: python -m ruyi
   test-from-release:
     strategy:
       fail-fast: false
