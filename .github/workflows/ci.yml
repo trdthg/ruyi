@@ -53,7 +53,7 @@ jobs:
         uses: ./.github/actions/test
         with:
           ruyi: ruyi-binary
-      - id: test compile
+      - id: testcompile
         uses: ./.github/wirkflows/test-compile.yml
         with:
           ruyi: ruyi-binary
