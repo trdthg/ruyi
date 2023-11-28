@@ -48,6 +48,9 @@ jobs:
           curl $RUYI_DOWNLOAD_LINK -o ruyi-binary
           chmod +x ./ruyi-binary
           export PATH="$(pwd):$PATH"
+      - name: ruyi help
+        run: |
+          ${{ inputs.ruyi }} -h
       - id: testcompile
         uses: ./.github/actions/compile
         with:
