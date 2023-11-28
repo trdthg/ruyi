@@ -50,7 +50,7 @@ jobs:
           export PATH="$(pwd):$PATH"
       - name: ruyi help
         run: |
-          ${{ inputs.ruyi }} -h
+          $RUYI -h
       - id: testcompile
         uses: ./.github/actions/compile
         with:
