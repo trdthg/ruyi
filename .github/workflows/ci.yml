@@ -48,9 +48,12 @@ jobs:
           curl $RUYI_DOWNLOAD_LINK -o ruyi-binary
           chmod +x ./ruyi-binary
           export PATH="$(pwd):$PATH"
-          $RUYI venv
           $RUYI -h
       - id: test
         uses: ./.github/actions/test
+        with:
+          ruyi: ruyi-binary
+      - id: test compile
+        uses: ./.github/wirkflows/test-compile.yml
         with:
           ruyi: ruyi-binary
