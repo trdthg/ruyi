@@ -34,7 +34,7 @@ jobs:
           ruyi: python -m ruyi
       - name: ruyi install
         run: |
-          apt install ninja-build
+          sudo apt install ninja-build
       - id: testcompile
         uses: ./.github/actions/compile
         with:
