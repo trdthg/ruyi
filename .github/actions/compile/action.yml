@@ -9,6 +9,7 @@ runs:
   using: "composite"
   steps:
     - name: ruyi help
+      shell: bash
       run: |
         ${{ inputs.ruyi }} install gnu-plct gnu-plct-xthead
         ${{ inputs.ruyi }} venv -t gnu-plct milkv-duo /tmp/venv1
