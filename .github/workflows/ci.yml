@@ -47,7 +47,7 @@ jobs:
         run: |
           curl $RUYI_DOWNLOAD_LINK -o ruyi-binary
           chmod +x ./ruyi-binary
-          export PATH="$(pwd):$PATH"
+          echo "$(pwd)" >> $GITHUB_PATH
       - name: ruyi help
         run: |
           $RUYI -h
