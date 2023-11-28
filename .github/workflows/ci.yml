@@ -32,6 +32,9 @@ jobs:
         uses: ./.github/actions/test
         with:
           ruyi: python -m ruyi
+      - name: ruyi install
+        run: |
+          apt install ninja-build
       - id: testcompile
         uses: ./.github/actions/compile
         with:
