@@ -49,6 +49,6 @@ jobs:
           chmod +x ./ruyi-binary
           export PATH="$(pwd):$PATH"
       - id: testcompile
-        uses: ./.github/action/compile.yml
+        uses: ./.github/actions/compile.yml
         with:
           ruyi: ruyi-binary
